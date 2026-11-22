@@ -59,30 +59,10 @@ hr {
 
 
 st.markdown("""
-<div style="
-    background: linear-gradient(135deg, #E8EDE3, #F5F3EC);
-    padding: 35px;
-    border-radius: 18px;
-    border: 1px solid #D5DFD0;
-    margin-bottom: 25px;
-">
-    <p style="
-        color: #71866A;
-        font-size: 13px;
-        letter-spacing: 3px;
-        font-weight: 600;
-    ">SMART ANALYTICS DASHBOARD</p>
-
-    <h1 style="
-        color: #263D35;
-        font-size: 36px;
-        margin-bottom: 10px;
-    ">🛒 Smart Shopping Pattern Detector</h1>
-
-    <p style="
-        color: #52665B;
-        font-size: 16px;
-    ">Discover products, understand shopping behaviour and explore smart recommendations.</p>
+<div style="background: linear-gradient(135deg, #E8EDE3, #F5F3EC); padding: 35px; border-radius: 18px; border: 1px solid #D5DFD0; margin-bottom: 25px;">
+<p style="color: #71866A; font-size: 13px; letter-spacing: 3px; font-weight: 600;">SMART ANALYTICS DASHBOARD</p>
+<h1 style="color: #263D35; font-size: 36px; margin-bottom: 10px;">🛒 Smart Shopping Pattern Detector</h1>
+<p style="color: #52665B; font-size: 16px;">Discover products, understand shopping behaviour and explore smart recommendations.</p>
 </div>
 """, unsafe_allow_html=True)
 
