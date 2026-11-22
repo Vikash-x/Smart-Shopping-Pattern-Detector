@@ -11,6 +11,53 @@ st.set_page_config(
     layout="wide"
 )
 
+# Cream and Sage Green Theme
+st.markdown("""
+<style>
+.stApp {
+    background-color: #F5F3EC;
+    color: #263D35;
+}
+
+[data-testid="stSidebar"] {
+    background-color: #E9EDE4;
+}
+
+h1, h2, h3 {
+    color: #263D35 !important;
+    font-family: 'Segoe UI', sans-serif;
+}
+
+p, label {
+    color: #52665B;
+}
+
+[data-testid="stMetric"] {
+    background-color: #FFFFFF;
+    border: 1px solid #E2E7DE;
+    border-radius: 14px;
+    padding: 18px;
+}
+
+.stButton > button {
+    background-color: #526F5B;
+    color: white;
+    border-radius: 10px;
+    border: none;
+}
+
+.stButton > button:hover {
+    background-color: #354F40;
+    color: white;
+}
+
+hr {
+    border-color: #DCE3D8;
+}
+</style>
+""", unsafe_allow_html=True)
+
+
 st.title("🛒 Smart Shopping Pattern Detector")
 st.write("Discover shopping patterns using Market Basket Analysis and Apriori Algorithm.")
 
