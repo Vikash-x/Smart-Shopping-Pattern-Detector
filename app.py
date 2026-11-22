@@ -122,43 +122,43 @@ try:
     top_products = data["itemDescription"].value_counts().head(10)
 
     
-fig, ax = plt.subplots(figsize=(10, 5), facecolor="#F5F3EC")
-ax.set_facecolor("#F5F3EC")
-
-sorted_products = top_products.sort_values()
-
-bars = ax.barh(
-    sorted_products.index,
-    sorted_products.values,
-    color="#8FAF8F",
-    edgecolor="#789477",
-    height=0.62
-)
-
-ax.set_xlabel("Number of Purchases", color="#52665B")
-ax.set_ylabel("")
-
-ax.grid(axis="x", linestyle="--", alpha=0.25)
-ax.set_axisbelow(True)
-
-for spine in ax.spines.values():
-    spine.set_visible(False)
-
-ax.tick_params(axis="both", colors="#52665B", labelsize=10)
-
-for bar in bars:
-    ax.text(
-        bar.get_width() + max(sorted_products.values) * 0.01,
-        bar.get_y() + bar.get_height() / 2,
-        f"{int(bar.get_width()):,}",
-        va="center",
-        color="#52665B",
-        fontsize=9
+    fig, ax = plt.subplots(figsize=(10, 5), facecolor="#F5F3EC")
+    ax.set_facecolor("#F5F3EC")
+    
+    sorted_products = top_products.sort_values()
+    
+    bars = ax.barh(
+        sorted_products.index,
+        sorted_products.values,
+        color="#8FAF8F",
+        edgecolor="#789477",
+        height=0.62
     )
-
-fig.tight_layout()
-st.pyplot(fig)
-plt.close(fig)
+    
+    ax.set_xlabel("Number of Purchases", color="#52665B")
+    ax.set_ylabel("")
+    
+    ax.grid(axis="x", linestyle="--", alpha=0.25)
+    ax.set_axisbelow(True)
+    
+    for spine in ax.spines.values():
+        spine.set_visible(False)
+    
+    ax.tick_params(axis="both", colors="#52665B", labelsize=10)
+    
+    for bar in bars:
+        ax.text(
+            bar.get_width() + max(sorted_products.values) * 0.01,
+            bar.get_y() + bar.get_height() / 2,
+            f"{int(bar.get_width()):,}",
+            va="center",
+            color="#52665B",
+            fontsize=9
+        )
+    
+    fig.tight_layout()
+    st.pyplot(fig)
+    plt.close(fig)
 
 
     st.divider()
@@ -222,7 +222,7 @@ plt.close(fig)
         st.info("No rules available with the current settings.")
 
     st.caption("Project: Smart Shopping Pattern Detector | Algorithm: Apriori")
-
 except Exception as e:
     st.error(f"Something went wrong: {e}")
     st.info("Please check that Groceries_dataset.csv is uploaded in the repository.")
+    
